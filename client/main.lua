@@ -56,7 +56,9 @@ eUberEats.Events = {
 
             end
 
-            if btn.name == "~r~Supprimer la course" then 
+            if btn.name == "~r~Supprimer la course" then
+
+                print(btn.id)
 
                 TriggerServerEvent("error:deleteCourse", btn.id)
 
@@ -97,7 +99,8 @@ eUberEats.Events = {
                     table.insert(eUberEats.Menu["informations"].b, {
                         name = "~r~Supprimer la course",
                         ask = "→",
-                        askX = true
+                        askX = true,
+                        id = btn.id
                     })
 
                 end

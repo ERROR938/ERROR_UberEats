@@ -140,7 +140,7 @@ chest.Events = {
 
                     TriggerServerEvent("error:depositItem", btn.item, tonumber(amount))
 
-                    Back()
+                    CloseMenu()
 
                 end
 
@@ -151,8 +151,6 @@ chest.Events = {
         if _.currentMenu == "interactions" then
 
             if PMenu > 2 then
-
-                print(btn.nb)
 
                 local amount = KeyboardInput("Combien ?", "", 10)
 

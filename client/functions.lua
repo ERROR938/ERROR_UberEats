@@ -42,6 +42,8 @@ function getAllCourses()
 
             for _, v in pairs(cb) do
 
+                print(v.playerid)
+
                 if v.take == "non" or v.take == GetPlayerName(source) then
 
                     all_courses[#all_courses + 1] = {
