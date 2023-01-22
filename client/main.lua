@@ -225,3 +225,18 @@ RegisterCommand("ubereats", function()
     end, GetPlayerServerId(PlayerId()))
 
 end, false)
+
+CreateThread(function()
+
+    local blip = AddBlipForCoord(Config.pos['boss'].x, Config.pos['boss'].y, Config.pos['boss'].z)
+    SetBlipSprite (blip, 440)
+    SetBlipScale  (blip, 1.0)
+    SetBlipDisplay(blip, 4)
+    SetBlipColour (blip, 2)
+    SetBlipAsShortRange(blip, true)
+
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString("Uber Eats")
+    EndTextCommandSetBlipName(blip)
+
+end)
